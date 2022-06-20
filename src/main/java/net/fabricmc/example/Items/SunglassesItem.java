@@ -7,6 +7,7 @@ import net.minecraft.item.Item;
 
 public class SunglassesItem extends ArmorItem {
 
+    public static final String PATH = "sunglasses";
     public SunglassesItem(ArmorMaterial material, EquipmentSlot slot, Settings settings) {
         super(material, slot, settings);
     }
