@@ -1,0 +1,8 @@
+{
+  "type": "blasting",
+  "ingredient": {
+    "item": "minecraft:coal_block"
+  },
+  "result":"test:plastic",
+  "experience": 0
+}

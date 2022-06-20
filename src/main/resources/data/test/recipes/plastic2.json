@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":[
+    "   ",
+    "   ",
+    "PPP"
+  ],
+
+  "key": {
+    "P": {
+      "item": "test:plastic_strip"
+    }
+  },
+  "result": {
+    "item": "test:plastic"
+  }
+}

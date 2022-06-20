@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "test:plastic"
+    }
+  ],
+  "result": {
+    "item": "test:plastic_strip",
+    "count": 3
+  }
+}
