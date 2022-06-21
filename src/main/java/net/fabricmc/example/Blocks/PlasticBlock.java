@@ -1,4 +1,4 @@
-package net.fabricmc.example.Items;
+package net.fabricmc.example.Blocks;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.MapColor;
