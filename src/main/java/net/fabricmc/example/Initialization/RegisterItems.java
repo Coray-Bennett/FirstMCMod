@@ -2,6 +2,7 @@ package net.fabricmc.example.Initialization;
 
 import net.fabricmc.example.ArmorMaterial.Plastic;
 import net.fabricmc.example.Blocks.PlasticBlock;
+import net.fabricmc.example.ExampleMod;
 import net.fabricmc.example.Fluids.MoltenPlastic;
 import net.fabricmc.example.Items.PlasticItem;
 import net.fabricmc.example.Items.PlasticStripItem;
@@ -39,22 +40,20 @@ public class RegisterItems {
     public static void register() {
 
         //items
-        Registry.register(Registry.ITEM, new Identifier("test", PlasticItem.PATH), PLASTIC_ITEM);
-        Registry.register(Registry.ITEM, new Identifier("test", PlasticStripItem.PATH), PLASTIC_STRIP);
-        Registry.register(Registry.ITEM, new Identifier("test", SunglassesItem.PATH), SUNGLASSES);
-        Registry.register(Registry.ITEM, new Identifier("test", MoltenPlastic.PATH_BUCKET), MOLTEN_PLASTIC_BUCKET);
+        Registry.register(Registry.ITEM, new Identifier(ExampleMod.MOD_ID, PlasticItem.PATH), PLASTIC_ITEM);
+        Registry.register(Registry.ITEM, new Identifier(ExampleMod.MOD_ID, PlasticStripItem.PATH), PLASTIC_STRIP);
+        Registry.register(Registry.ITEM, new Identifier(ExampleMod.MOD_ID, SunglassesItem.PATH), SUNGLASSES);
+        Registry.register(Registry.ITEM, new Identifier(ExampleMod.MOD_ID, MoltenPlastic.PATH_BUCKET), MOLTEN_PLASTIC_BUCKET);
 
         //blocks + block items
-        Registry.register(Registry.BLOCK, new Identifier("test", PlasticBlock.PATH), PLASTIC_BLOCK);
-        Registry.register(Registry.ITEM, new Identifier("test", PlasticBlock.PATH),
+        Registry.register(Registry.BLOCK, new Identifier(ExampleMod.MOD_ID, PlasticBlock.PATH), PLASTIC_BLOCK);
+        Registry.register(Registry.ITEM, new Identifier(ExampleMod.MOD_ID, PlasticBlock.PATH),
                 new BlockItem(PLASTIC_BLOCK, new FabricItemSettings().group(CreateGroups.PLASTICS_GROUP)));
-        Registry.register(Registry.BLOCK, new Identifier("test", MoltenPlastic.PATH_BLOCK), MOLTEN_PLASTIC_BLOCK);
+        Registry.register(Registry.BLOCK, new Identifier(ExampleMod.MOD_ID, MoltenPlastic.PATH_BLOCK), MOLTEN_PLASTIC_BLOCK);
 
         //fluids
-        Registry.register(Registry.FLUID, new Identifier("test", MoltenPlastic.PATH_STILL), STILL_MOLTEN_PLASTIC);
-        Registry.register(Registry.FLUID, new Identifier("test", MoltenPlastic.PATH_FLOWING), FLOWING_MOLTEN_PLASTIC);
-
-
+        Registry.register(Registry.FLUID, new Identifier(ExampleMod.MOD_ID, MoltenPlastic.PATH_STILL), STILL_MOLTEN_PLASTIC);
+        Registry.register(Registry.FLUID, new Identifier(ExampleMod.MOD_ID, MoltenPlastic.PATH_FLOWING), FLOWING_MOLTEN_PLASTIC);
 
     }
 
