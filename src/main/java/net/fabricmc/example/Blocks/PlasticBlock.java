@@ -22,38 +22,32 @@ public class PlasticBlock extends Block {
                                                 true, true, true, PistonBehavior.NORMAL);
     public static final float STRENGTH = 2.0f;
 
-    public static BooleanProperty MELTED = BooleanProperty.of("melted");
-
-    //thread that will run once block is melting
-    private final Thread melting;
+    public final static BooleanProperty MELTED = BooleanProperty.of("melted");
+    public final static BooleanProperty NEAR_LAVA = BooleanProperty.of("near_lava");
 
     public PlasticBlock(Settings settings) {
 
         super(settings);
         this.setDefaultState( this.getDefaultState().with(MELTED, false));
-
-        melting = new Thread(new Runnable() {
-
-            int count = 0;
-            final int MAX_COUNT = 10;
-            @Override
-            public void run() {
-
-                //TODO: write this
-
-            }
-        });
+        this.setDefaultState( this.getDefaultState().with(NEAR_LAVA, false));
 
     }
 
     @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
-        builder.add(MELTED);
+        builder.add(MELTED, NEAR_LAVA);
     }
 
     @Override
     public void onPlaced(World world, BlockPos pos, BlockState state, @Nullable LivingEntity placer, ItemStack itemStack) {
-        //TODO: write this, complete 'melted' thread first
+
+        //thread, alive as long as the block is placed, checks if near lava, updates BlockState
+        new Thread(
+                () -> {
+                //TODO: figure out if this will work
+                }
+        );
+
 
     }
 
