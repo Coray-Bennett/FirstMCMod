@@ -1,6 +1,7 @@
 package net.fabricmc.example;
 
 import net.fabricmc.api.ClientModInitializer;
+import net.fabricmc.example.Initialization.RegisterFluids;
 import net.fabricmc.example.Initialization.RegisterItems;
 import net.fabricmc.fabric.api.client.render.fluid.v1.FluidRenderHandlerRegistry;
 import net.fabricmc.fabric.api.client.render.fluid.v1.SimpleFluidRenderHandler;
@@ -17,7 +18,7 @@ public class ClientInitializer implements ClientModInitializer {
 
         LOGGER.info("before");
 
-        FluidRenderHandlerRegistry.INSTANCE.register(RegisterItems.STILL_MOLTEN_PLASTIC, RegisterItems.FLOWING_MOLTEN_PLASTIC,
+        FluidRenderHandlerRegistry.INSTANCE.register(RegisterFluids.STILL_MOLTEN_PLASTIC, RegisterFluids.FLOWING_MOLTEN_PLASTIC,
                 new SimpleFluidRenderHandler(
                         SimpleFluidRenderHandler.LAVA_STILL,
                         SimpleFluidRenderHandler.LAVA_FLOWING,

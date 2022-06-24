@@ -1,5 +1,6 @@
 package net.fabricmc.example.Fluids;
 
+import net.fabricmc.example.Initialization.RegisterFluids;
 import net.fabricmc.example.Initialization.RegisterItems;
 import net.minecraft.block.BlockState;
 import net.minecraft.fluid.Fluid;
@@ -17,22 +18,22 @@ public abstract class MoltenPlastic extends CustomFluid {
 
     @Override
     public Fluid getFlowing() {
-        return RegisterItems.FLOWING_MOLTEN_PLASTIC;
+        return RegisterFluids.FLOWING_MOLTEN_PLASTIC;
     }
 
     @Override
     public Fluid getStill() {
-        return RegisterItems.STILL_MOLTEN_PLASTIC;
+        return RegisterFluids.STILL_MOLTEN_PLASTIC;
     }
 
     @Override
     public Item getBucketItem() {
-        return RegisterItems.MOLTEN_PLASTIC_BUCKET;
+        return RegisterFluids.MOLTEN_PLASTIC_BUCKET;
     }
 
     @Override
     protected BlockState toBlockState(FluidState state) {
-        return RegisterItems.MOLTEN_PLASTIC_BLOCK.getDefaultState().with(Properties.LEVEL_15, getBlockStateLevel(state));
+        return RegisterFluids.MOLTEN_PLASTIC_BLOCK.getDefaultState().with(Properties.LEVEL_15, getBlockStateLevel(state));
     }
 
     public static class Still extends MoltenPlastic {

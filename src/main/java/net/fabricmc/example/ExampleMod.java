@@ -2,8 +2,7 @@ package net.fabricmc.example;
 
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.ModInitializer;
-import net.fabricmc.example.Initialization.CreateGroups;
-import net.fabricmc.example.Initialization.RegisterItems;
+import net.fabricmc.example.Initialization.*;
 
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.render.fluid.v1.FluidRenderHandlerRegistry;
@@ -44,6 +43,15 @@ public class ExampleMod implements ModInitializer {
 
 		//register items
 		RegisterItems.register();
+
+		//register blocks
+		RegisterBlocks.register();
+
+		//register block entities
+		RegisterBlockEntities.register();
+
+		//register fluids
+		RegisterFluids.register();
 
 	}
 
